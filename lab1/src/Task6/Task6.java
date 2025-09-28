@@ -1,16 +1,8 @@
-import java.util.HashMap;
-import java.util.Map;
+package Task6;
+
 import java.util.Scanner;
 
 public class Task6 {
-    static Map<String, Double> rates = new HashMap<>();
-
-    static {
-        rates.put("UAH", 1.0);
-        rates.put("USD", 0.027);
-        rates.put("CAD", 0.037);
-        rates.put("EUR", 0.025);
-    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -44,13 +36,28 @@ public class Task6 {
         String from = parts[1].toUpperCase();
         String to = parts[3].toUpperCase();
 
-        if (!rates.containsKey(from) || !rates.containsKey(to)) {
-            throw new Exception("Unsupported currency. Available: UAH, USD, CAD, EUR.");
-        }
+        double rateFrom = getRate(from);
+        double rateTo = getRate(to);
 
-        double inUah = amount / rates.get(from);
-        double result = inUah * rates.get(to);
+        double inUah = amount / rateFrom;
+        double result = inUah * rateTo;
 
         return Math.round(result * 100.0) / 100.0;
+    }
+
+    // Метод для отримання курсу валюти до гривні
+    public static double getRate(String currency) throws Exception {
+        switch (currency) {
+            case "UAH":
+                return 1.0;
+            case "USD":
+                return 0.027;
+            case "CAD":
+                return 0.037;
+            case "EUR":
+                return 0.025;
+            default:
+                throw new Exception("Unsupported currency. Available: UAH, USD, CAD, EUR.");
+        }
     }
 }

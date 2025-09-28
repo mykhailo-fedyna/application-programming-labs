@@ -1,3 +1,5 @@
+package Task5;
+
 public class Task5 {
     public static void main(String[] args) {
         String[][] matrix = {
@@ -7,7 +9,6 @@ public class Task5 {
         };
 
         String substring = "hell";
-
         int count = countSubstringInMatrix(matrix, substring);
 
         System.out.println("Number of occurrences: " + count);
