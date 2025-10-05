@@ -1,8 +1,7 @@
 package Task2;
 
-public class Rectangle extends Shape {
-    private final double width;
-    private final double height;
+public class Rectangle extends Figure2D {
+    private final double width, height;
 
     public Rectangle(double width, double height) {
         this.width = width;
@@ -10,12 +9,7 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return width * height;
-    }
-
-    @Override
-    public double volume() {
-        return 0;
     }
 }

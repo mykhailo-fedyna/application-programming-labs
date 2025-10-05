@@ -1,6 +1,6 @@
 package Task2;
 
-public class Cube extends Shape {
+public class Cube extends Figure3D {
     private final double side;
 
     public Cube(double side) {
@@ -8,12 +8,12 @@ public class Cube extends Shape {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return 6 * side * side;
     }
 
     @Override
-    public double volume() {
+    public double getVolume() {
         return side * side * side;
     }
 }

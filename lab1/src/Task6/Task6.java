@@ -47,17 +47,12 @@ public class Task6 {
 
     // Метод для отримання курсу валюти до гривні
     public static double getRate(String currency) throws Exception {
-        switch (currency) {
-            case "UAH":
-                return 1.0;
-            case "USD":
-                return 0.027;
-            case "CAD":
-                return 0.037;
-            case "EUR":
-                return 0.025;
-            default:
-                throw new Exception("Unsupported currency. Available: UAH, USD, CAD, EUR.");
-        }
+        return switch (currency) {
+            case "UAH" -> 1.0;
+            case "USD" -> 0.027;
+            case "CAD" -> 0.037;
+            case "EUR" -> 0.025;
+            default -> throw new Exception("Unsupported currency. Available: UAH, USD, CAD, EUR.");
+        };
     }
 }

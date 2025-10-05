@@ -2,21 +2,24 @@ package Task2;
 
 public class Main {
     public static void main(String[] args) {
-        final Shape circle = new Circle(5);
-        final Shape square = new Square(4);
-        final Shape rectangle = new Rectangle(3, 6);
-        final Shape triangle = new Triangle(4, 5);
-        final Shape cube = new Cube(3);
-        final Shape pyramid = new Pyramid(9, 6);
-        final Shape sphere = new Sphere(2);
+        final Triangle triangle = new Triangle(3, 4, 5, 2);
+        final Square square = new Square(4);
+        final Rectangle rectangle = new Rectangle(3, 5);
+        final Circle circle = new Circle(3);
 
-        Shape[] shapes = {circle, square, rectangle, triangle, cube, pyramid, sphere};
+        final Cube cube = new Cube(2);
+        final Sphere sphere = new Sphere(3);
+        final Pyramid pyramid = new Pyramid(4, 6);
 
-        for (Shape shape : shapes) {
-            System.out.println(shape.getClass().getSimpleName() +
-                    " - Area: " + shape.area() +
-                    ", Volume: " + shape.volume());
-        }
+        System.out.println("=== 2D ФІГУРИ ===");
+        System.out.println("Трикутник — площа: " + triangle.getArea());
+        System.out.println("Квадрат — площа: " + square.getArea());
+        System.out.println("Прямокутник — площа: " + rectangle.getArea());
+        System.out.println("Коло — площа: " + circle.getArea());
+
+        System.out.println("\n=== 3D ФІГУРИ ===");
+        System.out.println("Куб — площа: " + cube.getArea() + ", об’єм: " + cube.getVolume());
+        System.out.println("Сфера — площа: " + sphere.getArea() + ", об’єм: " + sphere.getVolume());
+        System.out.println("Піраміда — площа: " + pyramid.getArea() + ", об’єм: " + pyramid.getVolume());
     }
 }
-

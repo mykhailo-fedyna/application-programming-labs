@@ -1,6 +1,6 @@
 package Task2;
 
-public class Circle extends Shape {
+public class Circle extends Figure2D {
     private final double radius;
 
     public Circle(double radius) {
@@ -8,12 +8,7 @@ public class Circle extends Shape {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return Math.PI * radius * radius;
-    }
-
-    @Override
-    public double volume() {
-        return 0;
     }
 }

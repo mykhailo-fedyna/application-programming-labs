@@ -1,6 +1,6 @@
 package Task2;
 
-public class Sphere extends Shape {
+public class Sphere extends Figure3D {
     private final double radius;
 
     public Sphere(double radius) {
@@ -8,12 +8,12 @@ public class Sphere extends Shape {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return 4 * Math.PI * radius * radius;
     }
 
     @Override
-    public double volume() {
-        return (4.0 / 3) * Math.PI * radius * radius * radius;
+    public double getVolume() {
+        return (4.0 / 3.0) * Math.PI * radius * radius * radius;
     }
 }

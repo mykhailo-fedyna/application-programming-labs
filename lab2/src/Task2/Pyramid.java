@@ -1,6 +1,6 @@
 package Task2;
 
-public class Pyramid extends Shape {
+public class Pyramid extends Figure3D {
     private final double baseArea;
     private final double height;
 
@@ -10,12 +10,12 @@ public class Pyramid extends Shape {
     }
 
     @Override
-    public double area() {
-        return baseArea + 0.5 * Math.sqrt(baseArea) * height;
+    public double getArea() {
+        return baseArea;
     }
 
     @Override
-    public double volume() {
-        return (1.0 / 3) * baseArea * height;
+    public double getVolume() {
+        return (baseArea * height) / 3;
     }
 }

@@ -1,6 +1,6 @@
 package Task2;
 
-public class Square extends Shape {
+public class Square extends Figure2D {
     private final double side;
 
     public Square(double side) {
@@ -8,12 +8,7 @@ public class Square extends Shape {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return side * side;
-    }
-
-    @Override
-    public double volume() {
-        return 0;
     }
 }
